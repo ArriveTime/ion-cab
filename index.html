@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IonCab.com | The Future of the Ride</title>
+
+<meta name="description" content="IonCab.com is your independent guide to robotaxis, autonomous vehicles, electric transportation and the future of mobility. Discover services, cities, technology and official ride providers.">
+
+<meta name="keywords" content="robotaxi, autonomous taxi, self driving taxi, autonomous vehicles, electric taxi, EV rides, Waymo, Zoox, rideshare, future transportation, mobility">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#050b12">
+
+<link rel="canonical" href="https://ioncab.com/">
+
+<meta property="og:title" content="IonCab.com | The Future of the Ride">
+<meta property="og:description" content="Robotaxis • Autonomous Vehicles • Electric Mobility • Future Transportation">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ioncab.com/">
+
+<style>
+
+:root{
+    --black:#03070b;
+    --dark:#07111b;
+    --panel:#0c1925;
+    --panel2:#102332;
+    --cyan:#00e5ff;
+    --blue:#158cff;
+    --green:#35f0b0;
+    --white:#ffffff;
+    --text:#dce9f1;
+    --muted:#8fa8b8;
+    --line:#1c3444;
+    --shadow:0 18px 45px rgba(0,0,0,.28);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--black);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+}
+
+button,
+input,
+select{
+    font:inherit;
+}
+
+.container{
+    width:min(1180px,91%);
+    margin:auto;
+}
+
+section{
+    scroll-margin-top:85px;
+}
+
+.section{
+    padding:85px 0;
+}
+
+.section-alt{
+    background:var(--dark);
+}
+
+.section-blue{
+    background:
+        radial-gradient(circle at 80% 20%,rgba(0,229,255,.11),transparent 30%),
+        var(--panel);
+}
+
+.section-header{
+    max-width:800px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--cyan);
+    font-size:.76rem;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.section-header h2{
+    color:white;
+    font-size:clamp(2rem,5vw,3.1rem);
+    line-height:1.1;
+    margin-top:10px;
+}
+
+.section-header p{
+    color:var(--muted);
+    margin-top:15px;
+}
+
+/* ======================================================
+NAV
+====================================================== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:13px 5%;
+
+    background:rgba(3,7,11,.94);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(0,229,255,.15);
+}
+
+.logo{
+    text-decoration:none;
+    font-size:1.65rem;
+    font-weight:900;
+    letter-spacing:-1px;
+    color:white;
+}
+
+.logo span{
+    color:var(--cyan);
+}
+
+.navlinks{
+    list-style:none;
+    display:flex;
+    gap:24px;
+}
+
+.navlinks a{
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:.75rem;
+    font-weight:800;
+    color:#bdd0dc;
+}
+
+.navlinks a:hover{
+    color:var(--cyan);
+}
+
+.nav-btn{
+    text-decoration:none;
+    background:linear-gradient(135deg,var(--cyan),var(--blue));
+    color:#001018;
+    padding:10px 16px;
+    border-radius:4px;
+    font-size:.73rem;
+    font-weight:900;
+}
+
+/* ======================================================
+HERO
+====================================================== */
+
+.hero{
+    min-height:94vh;
+    display:flex;
+    align-items:center;
+
+    padding:145px 5% 100px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,7,11,.98) 0%,
+            rgba(3,7,11,.88) 45%,
+            rgba(3,7,11,.45) 100%
+        ),
+        url("https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=2000&q=88")
+        center/cover no-repeat;
+
+    position:relative;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:160px;
+    background:linear-gradient(transparent,var(--black));
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:min(780px,100%);
+}
+
+.hero-tag{
+    color:var(--cyan);
+    font-size:.78rem;
+    letter-spacing:4px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(4rem,10vw,8rem);
+    line-height:.9;
+    letter-spacing:-5px;
+    color:white;
+    margin-top:15px;
+}
+
+.hero h1 span{
+    color:var(--cyan);
+}
+
+.hero h2{
+    font-size:clamp(1.6rem,4vw,3rem);
+    line-height:1.1;
+    margin-top:24px;
+    color:white;
+}
+
+.hero-line{
+    margin-top:18px;
+    color:#86f5ff;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.hero p{
+    max-width:700px;
+    color:#bfd0da;
+    margin-top:20px;
+    font-size:1.05rem;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:11px;
+    margin-top:30px;
+}
+
+/* ======================================================
+BUTTONS
+====================================================== */
+
+.btn{
+    border:0;
+    border-radius:4px;
+    padding:14px 21px;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+
+    font-size:.78rem;
+    font-weight:900;
+    letter-spacing:.7px;
+    text-transform:uppercase;
+
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,var(--cyan),var(--blue));
+    color:#001018;
+}
+
+.btn-dark{
+    background:#122634;
+    color:white;
+    border:1px solid #24475d;
+}
+
+.btn-outline{
+    background:transparent;
+    color:white;
+    border:1px solid #426070;
+}
+
+.btn-green{
+    background:var(--green);
+    color:#02110c;
+}
+
+/* ======================================================
+QUICK ACTIONS
+====================================================== */
+
+.quick-wrap{
+    margin-top:-60px;
+    position:relative;
+    z-index:20;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.quick{
+    background:linear-gradient(145deg,#0d1d29,#08131d);
+    border:1px solid var(--line);
+    padding:25px 18px;
+    border-radius:7px;
+    text-align:center;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.quick:hover{
+    border-color:var(--cyan);
+    transform:translateY(-5px);
+    box-shadow:0 12px 35px rgba(0,229,255,.08);
+}
+
+.quick-icon{
+    font-size:1.9rem;
+    margin-bottom:10px;
+}
+
+.quick h3{
+    color:white;
+    font-size:.95rem;
+}
+
+.quick p{
+    color:var(--muted);
+    font-size:.75rem;
+    margin-top:5px;
+}
+
+/* ======================================================
+CITY SEARCH
+====================================================== */
+
+.search-card{
+    max-width:960px;
+    margin:auto;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:9px;
+    padding:35px;
+    box-shadow:var(--shadow);
+}
+
+.search-card h3{
+    color:white;
+    text-align:center;
+    font-size:1.4rem;
+}
+
+.search-card > p{
+    text-align:center;
+    color:var(--muted);
+    margin:7px 0 23px;
+}
+
+.search-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:10px;
+}
+
+input,
+select{
+    width:100%;
+    padding:15px;
+    background:#07131d;
+    color:white;
+    border:1px solid var(--line);
+    border-radius:4px;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border-color:var(--cyan);
+}
+
+.city-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:18px;
+}
+
+.city-buttons button{
+    border:1px solid var(--line);
+    background:#0b1a25;
+    color:#bad0dd;
+    border-radius:20px;
+    padding:8px 12px;
+    cursor:pointer;
+    font-size:.74rem;
+}
+
+.city-buttons button:hover{
+    border-color:var(--cyan);
+    color:var(--cyan);
+}
+
+/* ======================================================
+PROVIDERS
+====================================================== */
+
+.provider-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.provider{
+    background:linear-gradient(145deg,var(--panel),#08141e);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:28px;
+    position:relative;
+}
+
+.provider-badge{
+    display:inline-block;
+    color:var(--cyan);
+    background:rgba(0,229,255,.08);
+    border:1px solid rgba(0,229,255,.25);
+    border-radius:20px;
+    padding:5px 10px;
+    font-size:.67rem;
+    font-weight:900;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.provider h3{
+    color:white;
+    font-size:1.35rem;
+    margin-top:16px;
+}
+
+.provider p{
+    color:var(--muted);
+    font-size:.83rem;
+    margin:9px 0 20px;
+}
+
+.provider-note{
+    font-size:.72rem !important;
+    color:#7893a4 !important;
+}
+
+/* ======================================================
+MOBILITY TYPES
+====================================================== */
+
+.mobility-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.mobility{
+    min-height:190px;
+    background:#08151f;
+    border:1px solid var(--line);
+    padding:25px;
+    border-radius:7px;
+}
+
+.mobility-icon{
+    font-size:2rem;
+}
+
+.mobility h3{
+    color:white;
+    margin-top:12px;
+    font-size:1rem;
+}
+
+.mobility p{
+    color:var(--muted);
+    font-size:.78rem;
+    margin-top:7px;
+}
+
+/* ======================================================
+HOW IT WORKS
+====================================================== */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.step{
+    text-align:center;
+    padding:25px 15px;
+}
+
+.step-number{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    margin:0 auto 15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(0,229,255,.09);
+    border:1px solid var(--cyan);
+    color:var(--cyan);
+
+    font-weight:900;
+}
+
+.step h3{
+    color:white;
+    font-size:.95rem;
+}
+
+.step p{
+    color:var(--muted);
+    font-size:.77rem;
+    margin-top:7px;
+}
+
+/* ======================================================
+TRIP PLANNER
+====================================================== */
+
+.planner{
+    max-width:950px;
+    margin:auto;
+    background:#08151f;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:35px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.field label{
+    color:#a9c0ce;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:.7rem;
+    font-weight:900;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.trip-output{
+    display:none;
+    margin-top:25px;
+    padding:22px;
+    background:#0d202d;
+    border-left:4px solid var(--cyan);
+}
+
+.trip-output h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+.trip-output p{
+    color:#adc1cd;
+    margin:6px 0;
+}
+
+.trip-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:17px;
+}
+
+/* ======================================================
+TOOLS
+====================================================== */
+
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.tool{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:7px;
+    padding:26px;
+}
+
+.tool h3{
+    color:white;
+    font-size:1.05rem;
+}
+
+.tool p{
+    color:var(--muted);
+    font-size:.79rem;
+    margin:8px 0 17px;
+}
+
+.tool-result{
+    margin-top:15px;
+    padding:12px;
+    background:#07131d;
+    border-radius:4px;
+    color:var(--cyan);
+    font-weight:800;
+    min-height:48px;
+}
+
+/* ======================================================
+NEWS / OFFICIAL RESOURCES
+====================================================== */
+
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.resource{
+    display:block;
+    text-decoration:none;
+    background:#091823;
+    border:1px solid var(--line);
+    border-radius:7px;
+    padding:24px;
+    transition:.2s;
+}
+
+.resource:hover{
+    border-color:var(--cyan);
+    transform:translateY(-3px);
+}
+
+.resource h3{
+    color:white;
+    font-size:.96rem;
+}
+
+.resource p{
+    color:var(--muted);
+    font-size:.76rem;
+    margin-top:7px;
+}
+
+.resource-arrow{
+    display:block;
+    color:var(--cyan);
+    margin-top:15px;
+    font-weight:900;
+}
+
+/* ======================================================
+SAFETY
+====================================================== */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.info{
+    padding:25px;
+    background:#08151f;
+    border:1px solid var(--line);
+    border-radius:7px;
+}
+
+.info h3{
+    color:white;
+}
+
+.info p{
+    color:var(--muted);
+    font-size:.8rem;
+    margin-top:8px;
+}
+
+/* ======================================================
+DISCLAIMER / FOOTER
+====================================================== */
+
+.disclaimer{
+    background:#020508;
+    border-top:1px solid #142632;
+    padding:40px 0;
+    text-align:center;
+    color:#6f8796;
+    font-size:.73rem;
+}
+
+.disclaimer strong{
+    color:#c9d9e2;
+}
+
+footer{
+    background:#010305;
+    padding:28px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    color:#6c8493;
+    font-size:.76rem;
+}
+
+.footer-brand{
+    color:var(--cyan);
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:1000px){
+
+    .provider-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .mobility-grid,
+    .resource-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:800px){
+
+    .navlinks{
+        display:none;
+    }
+
+    .hero{
+        background:
+            linear-gradient(rgba(3,7,11,.78),rgba(3,7,11,.96)),
+            url("https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=1400&q=85")
+            center/cover no-repeat;
+    }
+
+    .quick-grid,
+    .steps,
+    .tools-grid,
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+}
+
+@media(max-width:560px){
+
+    .logo{
+        font-size:1.25rem;
+    }
+
+    .nav-btn{
+        font-size:.65rem;
+        padding:8px 9px;
+    }
+
+    .hero h1{
+        letter-spacing:-3px;
+    }
+
+    .quick-grid,
+    .provider-grid,
+    .mobility-grid,
+    .steps,
+    .tools-grid,
+    .resource-grid,
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .search-row{
+        grid-template-columns:1fr;
+    }
+
+    .search-card,
+    .planner{
+        padding:23px 17px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+NAVIGATION
+===================================================== -->
+
+<nav>
+
+<a href="#top" class="logo">
+ION<span>CAB</span>.COM
+</a>
+
+<ul class="navlinks">
+<li><a href="#find">Find</a></li>
+<li><a href="#providers">Providers</a></li>
+<li><a href="#future">Technology</a></li>
+<li><a href="#planner">Plan</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#resources">News</a></li>
+</ul>
+
+<a href="#find" class="nav-btn">
+FIND A ROBOTAXI
+</a>
+
+</nav>
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
+<header class="hero" id="top">
+
+<div class="hero-content">
+
+<div class="hero-tag">
+AUTONOMOUS • ELECTRIC • CONNECTED
+</div>
+
+<h1>
+ION<span>CAB</span>
+</h1>
+
+<h2>
+THE FUTURE OF THE RIDE
+</h2>
+
+<div class="hero-line">
+ROBOTAXIS • AUTONOMOUS VEHICLES • ELECTRIC MOBILITY
+</div>
+
+<p>
+Your independent guide to the rapidly changing world of
+autonomous transportation. Discover robotaxi services,
+cities, technology, official providers and the next
+generation of mobility.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#find" class="btn btn-primary">
+FIND A ROBOTAXI
+</a>
+
+<a href="#providers" class="btn btn-dark">
+EXPLORE PROVIDERS
+</a>
+
+<a href="#future" class="btn btn-outline">
+HOW IT WORKS
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- =====================================================
+QUICK ACTIONS
+===================================================== -->
+
+<div class="quick-wrap">
+
+<div class="container">
+
+<div class="quick-grid">
+
+<div class="quick" onclick="scrollToSection('find')">
+<div class="quick-icon">🚕</div>
+<h3>ROBOTAXI NEAR ME</h3>
+<p>Find autonomous ride services in your area.</p>
+</div>
+
+<div class="quick" onclick="scrollToSection('providers')">
+<div class="quick-icon">🤖</div>
+<h3>PROVIDERS</h3>
+<p>Explore official autonomous mobility companies.</p>
+</div>
+
+<div class="quick" onclick="scrollToSection('planner')">
+<div class="quick-icon">📍</div>
+<h3>PLAN A RIDE</h3>
+<p>Build a simple transportation search.</p>
+</div>
+
+<div class="quick" onclick="scrollToSection('resources')">
+<div class="quick-icon">⚡</div>
+<h3>WHAT'S NEW</h3>
+<p>Go directly to official mobility news sources.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================================
+FIND A ROBOTAXI
+===================================================== -->
+
+<section class="section" id="find">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="eyebrow">
+ROBOTAXI FINDER
+</div>
+
+<h2>
+IS AUTONOMOUS TRANSPORTATION NEAR YOU?
+</h2>
+
+<p>
+Robotaxi availability changes frequently.
+Enter a city or ZIP code to search current information,
+then verify service directly with the official provider.
+</p>
+
+</div>
+
+<div class="search-card">
+
+<h3>
+Search Autonomous Rides
+</h3>
+
+<p>
+Enter your city, state or ZIP code.
+</p>
+
+<div class="search-row">
+
+<input
+id="robotaxiLocation"
+placeholder="Example: Phoenix, AZ or 85001"
+aria-label="City State or ZIP code">
+
+<button class="btn btn-primary" onclick="findRobotaxi()">
+SEARCH
+</button>
+
+</div>
+
+<div class="city-buttons">
+
+<button onclick="citySearch('Phoenix Arizona')">Phoenix</button>
+<button onclick="citySearch('San Francisco California')">San Francisco</button>
+<button onclick="citySearch('Los Angeles California')">Los Angeles</button>
+<button onclick="citySearch('Las Vegas Nevada')">Las Vegas</button>
+<button onclick="citySearch('Austin Texas')">Austin</button>
+<button onclick="citySearch('Dallas Texas')">Dallas</button>
+<button onclick="citySearch('Houston Texas')">Houston</button>
+<button onclick="citySearch('Miami Florida')">Miami</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+PROVIDERS
+===================================================== -->
+
+<section class="section section-alt" id="providers">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="eyebrow">
+OFFICIAL PROVIDERS
+</div>
+
+<h2>
+EXPLORE THE COMPANIES MOVING MOBILITY FORWARD
+</h2>
+
+<p>
+IonCab does not book or operate rides.
+Use these links to check current service areas,
+eligibility and availability directly with providers.
+</p>
+
+</div>
+
+<div class="provider-grid">
+
+<div class="provider">
+
+<span class="provider-badge">
+AUTONOMOUS RIDES
+</span>
+
+<h3>Waymo</h3>
+
+<p>
+Explore Waymo's autonomous ride-hailing service,
+current service areas and official ride information.
+</p>
+
+<a
+href="https://waymo.com/rides/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary">
+OFFICIAL WAYMO SITE
+</a>
+
+<p class="provider-note">
+Availability varies by city and can change.
+Verify directly with Waymo.
+</p>
+
+</div>
+
+<div class="provider">
+
+<span class="provider-badge">
+ROBOTAXI
+</span>
+
+<h3>Zoox</h3>
+
+<p>
+Learn about Zoox's purpose-built autonomous
+robotaxi and check where rides or future service
+are available.
+</p>
+
+<a
+href="https://zoox.com/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary">
+OFFICIAL ZOOX SITE
+</a>
+
+<p class="provider-note">
+Service status and access vary by location.
+Verify directly with Zoox.
+</p>
+
+</div>
+
+<div class="provider">
+
+<span class="provider-badge">
+RIDESHARE
+</span>
+
+<h3>Uber</h3>
+
+<p>
+Explore Uber transportation services.
+Autonomous vehicle partnerships may be available
+in selected markets.
+</p>
+
+<a
+href="https://www.uber.com/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary">
+OFFICIAL UBER SITE
+</a>
+
+<p class="provider-note">
+Vehicle type and autonomous availability vary
+by market.
+</p>
+
+</div>
+
+<div class="provider">
+
+<span class="provider-badge">
+RIDESHARE
+</span>
+
+<h3>Lyft</h3>
+
+<p>
+Check Lyft for current transportation options
+and mobility services available in your city.
+</p>
+
+<a
+href="https://www.lyft.com/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary">
+OFFICIAL LYFT SITE
+</a>
+
+<p class="provider-note">
+Service and vehicle availability vary by location.
+</p>
+
+</div>
+
+<div class="provider">
+
+<span class="provider-badge">
+AUTONOMOUS TECHNOLOGY
+</span>
+
+<h3>Tesla</h3>
+
+<p>
+Explore Tesla's official information about
+vehicles, autonomy technology and transportation
+developments.
+</p>
+
+<a
+href="https://www.tesla.com/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary">
+OFFICIAL TESLA SITE
+</a>
+
+<p class="provider-note">
+Always verify current product and service claims
+directly with the manufacturer.
+</p>
+
+</div>
+
+<div class="provider">
+
+<span class="provider-badge">
+MORE MOBILITY
+</span>
+
+<h3>Find More Services</h3>
+
+<p>
+Search for autonomous taxis, electric taxis and
+other mobility services operating near you.
+</p>
+
+<button
+class="btn btn-primary"
+onclick="searchMaps('autonomous taxi robotaxi')">
+SEARCH NEAR ME
+</button>
+
+<p class="provider-note">
+Search results are supplied by third-party mapping
+services and should be independently verified.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+FUTURE MOBILITY
+===================================================== -->
+
+<section class="section section-blue" id="future">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="eyebrow">
+FUTURE MOBILITY
+</div>
+
+<h2>
+TRANSPORTATION IS CHANGING
+</h2>
+
+<p>
+IonCab follows the technologies reshaping
+how people move through cities.
+</p>
+
+</div>
+
+<div class="mobility-grid">
+
+<div class="mobility">
+<div class="mobility-icon">🤖</div>
+<h3>Robotaxis</h3>
+<p>
+Ride-hailing vehicles designed to operate with
+automated driving systems in approved service areas.
+</p>
+</div>
+
+<div class="mobility">
+<div class="mobility-icon">⚡</div>
+<h3>Electric Mobility</h3>
+<p>
+Electric vehicles are increasingly used across
+taxi, rideshare and autonomous fleets.
+</p>
+</div>
+
+<div class="mobility">
+<div class="mobility-icon">📡</div>
+<h3>Connected Vehicles</h3>
+<p>
+Modern vehicles combine sensors, mapping,
+communications and software to support mobility.
+</p>
+</div>
+
+<div class="mobility">
+<div class="mobility-icon">🧠</div>
+<h3>Autonomous Driving</h3>
+<p>
+Cameras, radar, lidar, software and other systems
+can contribute to automated driving technologies.
+</p>
+</div>
+
+<div class="mobility">
+<div class="mobility-icon">🏙️</div>
+<h3>Smart Cities</h3>
+<p>
+Transportation technology is becoming increasingly
+connected with urban infrastructure and mobility planning.
+</p>
+</div>
+
+<div class="mobility">
+<div class="mobility-icon">♿</div>
+<h3>Accessibility</h3>
+<p>
+New mobility technologies may create additional
+transportation options for some riders with disabilities.
+</p>
+</div>
+
+<div class="mobility">
+<div class="mobility-icon">🔋</div>
+<h3>Charging</h3>
+<p>
+EV charging infrastructure is an important part
+of the transition toward electric transportation.
+</p>
+</div>
+
+<div class="mobility">
+<div class="mobility-icon">🛣️</div>
+<h3>What's Next?</h3>
+<p>
+IonCab follows new cities, vehicles, regulations,
+service launches and mobility technology.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+HOW A ROBOTAXI RIDE WORKS
+===================================================== -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="eyebrow">
+FIRST RIDE?
+</div>
+
+<h2>
+HOW A ROBOTAXI RIDE TYPICALLY WORKS
+</h2>
+
+<p>
+Exact procedures depend on the provider.
+Always follow instructions in the provider's official app.
+</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>CHECK AVAILABILITY</h3>
+<p>
+Confirm that an autonomous ride provider serves
+your location.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>USE THE OFFICIAL APP</h3>
+<p>
+Download or open the provider's official application
+and follow its instructions.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>REQUEST YOUR RIDE</h3>
+<p>
+Enter your destination and review the pickup point,
+fare and ride information.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>FOLLOW INSTRUCTIONS</h3>
+<p>
+Verify the vehicle and follow all provider safety
+instructions throughout your ride.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+TRIP PLANNER
+===================================================== -->
+
+<section class="section section-alt" id="planner">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="eyebrow">
+IONCAB TRIP PLANNER
+</div>
+
+<h2>
+PLAN YOUR NEXT RIDE
+</h2>
+
+<p>
+Create a simple transportation search without
+registering or sending your trip information to IonCab.
+</p>
+
+</div>
+
+<div class="planner">
+
+<div class="form-grid">
+
+<div class="field">
+<label>Starting Area</label>
+<input
+id="startLocation"
+placeholder="City, neighborhood or ZIP">
+</div>
+
+<div class="field">
+<label>Destination</label>
+<input
+id="destinationLocation"
+placeholder="Airport, hotel, attraction or address">
+</div>
+
+<div class="field">
+<label>Ride Preference</label>
+<select id="ridePreference">
+<option>Robotaxi / Autonomous</option>
+<option>Electric Taxi</option>
+<option>Rideshare</option>
+<option>Taxi</option>
+<option>Any Transportation</option>
+</select>
+</div>
+
+<div class="field">
+<label>Priority</label>
+<select id="ridePriority">
+<option>Convenience</option>
+<option>Lowest Cost</option>
+<option>Fastest Option</option>
+<option>Electric Vehicle</option>
+<option>Autonomous Experience</option>
+</select>
+</div>
+
+<div class="field full">
+
+<button
+class="btn btn-primary"
+onclick="buildTrip()">
+BUILD MY RIDE SEARCH
+</button>
+
+</div>
+
+</div>
+
+<div id="tripOutput" class="trip-output"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+TOOLS
+===================================================== -->
+
+<section class="section" id="tools">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="eyebrow">
+FREE MOBILITY TOOLS
+</div>
+
+<h2>
+USEFUL ON THE ROAD
+</h2>
+
+<p>
+Simple tools that run directly in your browser.
+</p>
+
+</div>
+
+<div class="tools-grid">
+
+<!-- DISTANCE -->
+
+<div class="tool">
+
+<h3>Trip Cost Estimator</h3>
+
+<p>
+Enter a distance and estimated per-mile rate.
+This is a planning calculation only, not a ride quote.
+</p>
+
+<input
+type="number"
+id="tripMiles"
+placeholder="Trip miles"
+min="0"
+step=".1">
+
+<input
+type="number"
+id="mileRate"
+placeholder="Estimated $ per mile"
+min="0"
+step=".01"
+style="margin-top:8px;">
+
+<button
+class="btn btn-primary"
+style="width:100%;margin-top:10px;"
+onclick="tripCost()">
+ESTIMATE
+</button>
+
+<div class="tool-result" id="tripCostResult">
+Enter your estimates above.
+</div>
+
+</div>
+
+<!-- CHARGING -->
+
+<div class="tool">
+
+<h3>EV Charging Near Me</h3>
+
+<p>
+Search mapping services for public EV charging
+stations near your current area.
+</p>
+
+<button
+class="btn btn-primary"
+style="width:100%;"
+onclick="searchMaps('EV charging stations')">
+FIND EV CHARGING
+</button>
+
+<div class="tool-result">
+Opens a current third-party map search.
+</div>
+
+</div>
+
+<!-- AIRPORT -->
+
+<div class="tool">
+
+<h3>Airport Transportation</h3>
+
+<p>
+Find taxis, rideshare and transportation services
+near an airport.
+</p>
+
+<input
+id="airportName"
+placeholder="Airport name or code">
+
+<button
+class="btn btn-primary"
+style="width:100%;margin-top:10px;"
+onclick="airportSearch()">
+SEARCH
+</button>
+
+<div class="tool-result">
+Example: LAX, LAS, PHX, MIA
+</div>
+
+</div>
+
+<!-- RANGE -->
+
+<div class="tool">
+
+<h3>EV Range Planner</h3>
+
+<p>
+Estimate remaining driving range from vehicle range
+and battery percentage.
+</p>
+
+<input
+type="number"
+id="fullRange"
+placeholder="Full battery range in miles"
+min="0">
+
+<input
+type="number"
+id="batteryPercent"
+placeholder="Battery remaining %"
+min="0"
+max="100"
+style="margin-top:8px;">
+
+<button
+class="btn btn-primary"
+style="width:100%;margin-top:10px;"
+onclick="rangeEstimate()">
+CALCULATE
+</button>
+
+<div class="tool-result" id="rangeResult">
+Planning estimate only.
+</div>
+
+</div>
+
+<!-- PARKING -->
+
+<div class="tool">
+
+<h3>Parking Near Me</h3>
+
+<p>
+If you're driving instead, quickly search for
+parking near your destination.
+</p>
+
+<button
+class="btn btn-primary"
+style="width:100%;"
+onclick="searchMaps('parking')">
+FIND PARKING
+</button>
+
+<div class="tool-result">
+Opens a third-party map search.
+</div>
+
+</div>
+
+<!-- TAXI -->
+
+<div class="tool">
+
+<h3>Taxi Near Me</h3>
+
+<p>
+Autonomous service isn't everywhere yet.
+Find conventional taxi services nearby.
+</p>
+
+<button
+class="btn btn-primary"
+style="width:100%;"
+onclick="searchMaps('taxi service')">
+FIND TAXIS
+</button>
+
+<div class="tool-result">
+Always verify the operator and fare directly.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+OFFICIAL NEWS & RESOURCES
+===================================================== -->
+
+<section class="section section-blue" id="resources">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="eyebrow">
+STAY INFORMED
+</div>
+
+<h2>
+OFFICIAL NEWS & RESOURCES
+</h2>
+
+<p>
+Autonomous transportation changes rapidly.
+These links take you to primary and official sources
+for current information.
+</p>
+
+</div>
+
+<div class="resource-grid">
+
+<a
+class="resource"
+href="https://waymo.com/blog/"
+target="_blank"
+rel="noopener noreferrer">
+
+<h3>Waymo News</h3>
+<p>
+Official Waymo announcements, technology and service updates.
+</p>
+<span class="resource-arrow">VIEW →</span>
+
+</a>
+
+<a
+class="resource"
+href="https://zoox.com/journal/"
+target="_blank"
+rel="noopener noreferrer">
+
+<h3>Zoox Journal</h3>
+<p>
+Official Zoox robotaxi and technology updates.
+</p>
+<span class="resource-arrow">VIEW →</span>
+
+</a>
+
+<a
+class="resource"
+href="https://www.nhtsa.gov/vehicle-safety/automated-vehicles-safety"
+target="_blank"
+rel="noopener noreferrer">
+
+<h3>NHTSA</h3>
+<p>
+U.S. government information about automated vehicle safety.
+</p>
+<span class="resource-arrow">VIEW →</span>
+
+</a>
+
+<a
+class="resource"
+href="https://afdc.energy.gov/"
+target="_blank"
+rel="noopener noreferrer">
+
+<h3>Alternative Fuels Data Center</h3>
+<p>
+U.S. Department of Energy information about alternative fuels,
+vehicles and infrastructure.
+</p>
+<span class="resource-arrow">VIEW →</span>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+SAFETY
+===================================================== -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="eyebrow">
+RIDE INFORMED
+</div>
+
+<h2>
+SMART MOBILITY
+</h2>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info">
+
+<h3>Verify the Provider</h3>
+
+<p>
+Request rides only through the provider's official
+website or application. Verify your vehicle before entering.
+</p>
+
+</div>
+
+<div class="info">
+
+<h3>Check Service Areas</h3>
+
+<p>
+Autonomous ride services operate only in certain
+locations and service boundaries can change.
+Always verify current availability directly.
+</p>
+
+</div>
+
+<div class="info">
+
+<h3>Know Your Ride</h3>
+
+<p>
+Autonomous, driver-assisted and conventional vehicles
+are not the same. Review the provider's description
+of the service you are using.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+DISCLAIMER
+===================================================== -->
+
+<div class="disclaimer">
+
+<div class="container">
+
+<strong>
+INDEPENDENT TRANSPORTATION INFORMATION WEBSITE
+</strong>
+
+<br><br>
+
+IonCab.com is an independent informational and mobility-discovery
+website. IonCab.com does not own, operate, dispatch, control,
+book or provide taxis, robotaxis, autonomous vehicles,
+rideshare vehicles or transportation services.
+
+<br><br>
+
+Service areas, availability, fares, wait times, operating hours,
+vehicle types, eligibility and transportation regulations can
+change without notice. Always verify current information directly
+with the applicable transportation provider and appropriate
+government authority before relying on it.
+
+<br><br>
+
+Company names, product names, logos and trademarks belong to
+their respective owners. References and links to third-party
+companies are provided for informational and identification
+purposes only and do not imply affiliation, sponsorship,
+partnership or endorsement.
+
+<br><br>
+
+IonCab.com does not guarantee the safety, availability,
+performance or suitability of any third-party transportation
+provider or vehicle. Follow all provider instructions and
+applicable laws.
+
+</div>
+
+</div>
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+
+<footer>
+
+<div>
+© <span id="year"></span> IonCab.com. All Rights Reserved.
+</div>
+
+<div class="footer-brand">
+THE FUTURE OF THE RIDE
+</div>
+
+</footer>
+
+<script>
+
+/* ======================================================
+HELPERS
+====================================================== */
+
+function scrollToSection(id){
+
+    document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+function mapURL(query){
+
+    return "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(query);
+}
+
+function webSearchURL(query){
+
+    return "https://www.google.com/search?q=" +
+    encodeURIComponent(query);
+}
+
+function searchMaps(query){
+
+    window.open(
+        mapURL(query + " near me"),
+        "_blank",
+        "noopener"
+    );
+}
+
+function escapeHTML(value){
+
+    return String(value)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+}
+
+function money(value){
+
+    return new Intl.NumberFormat(
+        "en-US",
+        {
+            style:"currency",
+            currency:"USD"
+        }
+    ).format(value);
+}
+
+/* ======================================================
+ROBOTAXI SEARCH
+====================================================== */
+
+function findRobotaxi(){
+
+    const location =
+    document.getElementById("robotaxiLocation")
+    .value.trim();
+
+    if(!location){
+
+        alert("Please enter a city, state or ZIP code.");
+        return;
+    }
+
+    const query =
+    "robotaxi autonomous ride service " + location;
+
+    window.open(
+        webSearchURL(query),
+        "_blank",
+        "noopener"
+    );
+}
+
+function citySearch(city){
+
+    window.open(
+        webSearchURL(
+            "robotaxi autonomous ride service " + city
+        ),
+        "_blank",
+        "noopener"
+    );
+}
+
+/* ======================================================
+TRIP PLANNER
+====================================================== */
+
+function buildTrip(){
+
+    const start =
+    document.getElementById("startLocation")
+    .value.trim();
+
+    const destination =
+    document.getElementById("destinationLocation")
+    .value.trim();
+
+    const preference =
+    document.getElementById("ridePreference").value;
+
+    const priority =
+    document.getElementById("ridePriority").value;
+
+    if(!start){
+
+        alert("Please enter your starting city or area.");
+        return;
+    }
+
+    const output =
+    document.getElementById("tripOutput");
+
+    output.style.display = "block";
+
+    let destinationText =
+    destination || "Not specified";
+
+    output.innerHTML = `
+
+        <h3>Your IonCab Ride Search</h3>
+
+        <p>
+        <strong>Starting area:</strong>
+        ${escapeHTML(start)}
+        </p>
+
+        <p>
+        <strong>Destination:</strong>
+        ${escapeHTML(destinationText)}
+        </p>
+
+        <p>
+        <strong>Ride preference:</strong>
+        ${escapeHTML(preference)}
+        </p>
+
+        <p>
+        <strong>Priority:</strong>
+        ${escapeHTML(priority)}
+        </p>
+
+        <p>
+        IonCab does not calculate or invent live fares or
+        vehicle availability. Use the searches below and
+        confirm the actual ride, price and pickup information
+        directly with the transportation provider.
+        </p>
+
+        <div class="trip-actions">
+
+            <button
+            class="btn btn-primary"
+            onclick="searchTripProvider()">
+            SEARCH RIDE OPTIONS
+            </button>
+
+            <button
+            class="btn btn-dark"
+            onclick="openDirections()">
+            MAP DIRECTIONS
+            </button>
+
+        </div>
+    `;
+}
+
+function searchTripProvider(){
+
+    const start =
+    document.getElementById("startLocation")
+    .value.trim();
+
+    const preference =
+    document.getElementById("ridePreference").value;
+
+    const query =
+    preference + " transportation " + start;
+
+    window.open(
+        webSearchURL(query),
+        "_blank",
+        "noopener"
+    );
+}
+
+function openDirections(){
+
+    const start =
+    document.getElementById("startLocation")
+    .value.trim();
+
+    const destination =
+    document.getElementById("destinationLocation")
+    .value.trim();
+
+    if(!destination){
+
+        alert("Please enter a destination.");
+        return;
+    }
+
+    const url =
+    "https://www.google.com/maps/dir/?api=1" +
+    "&origin=" + encodeURIComponent(start) +
+    "&destination=" + encodeURIComponent(destination);
+
+    window.open(url,"_blank","noopener");
+}
+
+/* ======================================================
+TRIP COST ESTIMATOR
+====================================================== */
+
+function tripCost(){
+
+    const miles =
+    Number(document.getElementById("tripMiles").value);
+
+    const rate =
+    Number(document.getElementById("mileRate").value);
+
+    const result =
+    document.getElementById("tripCostResult");
+
+    if(
+        !Number.isFinite(miles) ||
+        !Number.isFinite(rate) ||
+        miles < 0 ||
+        rate < 0
+    ){
+
+        result.textContent =
+        "Please enter valid positive numbers.";
+
+        return;
+    }
+
+    const total = miles * rate;
+
+    result.innerHTML =
+    "Planning estimate: <strong>" +
+    money(total) +
+    "</strong><br>" +
+    "This is not a provider fare quote.";
+}
+
+/* ======================================================
+EV RANGE
+====================================================== */
+
+function rangeEstimate(){
+
+    const fullRange =
+    Number(document.getElementById("fullRange").value);
+
+    const battery =
+    Number(document.getElementById("batteryPercent").value);
+
+    const result =
+    document.getElementById("rangeResult");
+
+    if(
+        !Number.isFinite(fullRange) ||
+        !Number.isFinite(battery) ||
+        fullRange < 0 ||
+        battery < 0 ||
+        battery > 100
+    ){
+
+        result.textContent =
+        "Enter a valid range and battery percentage.";
+
+        return;
+    }
+
+    const estimate =
+    fullRange * (battery / 100);
+
+    result.innerHTML =
+    "Estimated remaining range: <strong>" +
+    estimate.toFixed(0) +
+    " miles</strong><br>" +
+    "Actual range varies with driving and conditions.";
+}
+
+/* ======================================================
+AIRPORT SEARCH
+====================================================== */
+
+function airportSearch(){
+
+    const airport =
+    document.getElementById("airportName")
+    .value.trim();
+
+    if(!airport){
+
+        alert("Please enter an airport name or code.");
+        return;
+    }
+
+    window.open(
+        mapURL(
+            "taxi rideshare transportation near " + airport
+        ),
+        "_blank",
+        "noopener"
+    );
+}
+
+/* ======================================================
+ENTER KEY SEARCH
+====================================================== */
+
+document.getElementById("robotaxiLocation")
+.addEventListener("keydown",function(event){
+
+    if(event.key === "Enter"){
+        findRobotaxi();
+    }
+
+});
+
+/* ======================================================
+YEAR
+====================================================== */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
